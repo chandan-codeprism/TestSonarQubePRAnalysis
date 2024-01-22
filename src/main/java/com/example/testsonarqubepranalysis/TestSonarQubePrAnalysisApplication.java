@@ -10,6 +10,7 @@ public class TestSonarQubePrAnalysisApplication {
         SpringApplication.run(TestSonarQubePrAnalysisApplication.class, args);
         System.out.println("Hello World!");
         System.out.println("Hello World!");
+        System.out.println("Hello World!");
     }
 
 }
