@@ -1,15 +1,15 @@
-name: Build
+name: Build on Pull Request
 
 on:
-  push:
-    branches:
-      - master
-
+  pull_request:
+    types:
+      - opened
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    if: startsWith(github.event_name, 'pull_request') && github.event_name == 'pull_request' && contains(github.event.pull_request.base.ref, 'master') && contains(github.event.pull_request.title, 'Build')
     steps:
       - uses: actions/checkout@v2
         with:
