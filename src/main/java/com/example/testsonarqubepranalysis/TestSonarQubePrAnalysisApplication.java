@@ -8,6 +8,7 @@ public class TestSonarQubePrAnalysisApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TestSonarQubePrAnalysisApplication.class, args);
+        System.out.println("Hello World!");
     }
 
 }
