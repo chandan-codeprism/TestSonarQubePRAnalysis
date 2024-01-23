@@ -44,7 +44,7 @@ jobs:
         run: ./gradlew build sonar --info
 
       - name: SonarQube PR Decoration
-        uses: sonarsource/sonarqube-github-action@master
+        uses: SonarSource/sonarcloud-github-action@v1
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
